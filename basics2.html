@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="username">Nombre de Usuario: </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Tu Nombre Aquí"
+          minlength="5"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="message">Escribe tu mensaje:</label>
+        <textarea name="message" id="message" cols="50" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="email">Tu Correo: </label>
+        <input type="email" id="email" name="email" />
+      </fieldset>
+
+      <fieldset>
+        <label for="year">Año: </label>
+        <input type="number" id="year" name="year" />
+      </fieldset>
+
+      <fieldset>
+        <label for="password">Tu Contraseña: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="[A-Za-z0-9]{8,}"
+        />
+      </fieldset>
+
+      <fieldset>
+        <label for="date">Fecha: </label>
+        <input type="date" id="date" name="date" />
+      </fieldset>
+
+      <fieldset>
+        <label for="country">Selecciona tu país:</label>
+        <select name="country" id="country">
+          <option value="es">España</option>
+          <option value="mx">México</option>
+          <option value="ar">Argentina</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label>
+          <input type="checkbox" name="interests" value="deporte" /> Deportes
+        </label>
+        <label>
+          <input type="checkbox" name="interests" value="musica" /> Música
+        </label>
+        <label
+          ><input type="checkbox" name="interests" value="cine" /> Cine
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label><input type="radio" name="accept" value="si" />Acepto</label>
+        <label><input type="radio" name="accept" value="no" />No Acepto</label>
+      </fieldset>
+
+      <button>Enviar</button>
+    </form>
+
+  
+    <img
+      src="./assets/perro.jpg"
+      alt="Imagen de un paisaje"
+      width="300"
+      loading="lazy"
+    />
+
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>País</th>
+      </tr>
+      <tr>
+        <td>María</td>
+        <td>30</td>
+        <td>España</td>
+      </tr>
+      <tr>
+        <td>Carlos</td>
+        <td>25</td>
+        <td>Argentina</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table border="1">
+      <tr>
+        <th colspan="2">Encabezado combinado</th>
+      </tr>
+      <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table border="1">
+      <tr>
+        <th rowspan="2">Encabezado fusionado</th>
+        <td>Celda 1</td>
+      </tr>
+      <tr>
+        <td>Celda 2</td>
+      </tr>
+    </table>
+  </body>
+</html>
