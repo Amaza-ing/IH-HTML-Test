@@ -1,14 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   margin: 0;
+  /* background-image: url("./assets/perro.jpg"); */
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  /* background-attachment: fixed; */
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(138,142,0,0.8155637254901961) 35%, rgba(0,212,255,1) 100%);
 }
 
 h1 {
   color: yellow;
   background-color: black;
+  letter-spacing: 5px;
+}
+
+p {
+  line-height: 1.5;
 }
 
 a {
@@ -95,4 +115,26 @@ input[type="text"] {
   background-color: blue;
   border: 3px solid black;
   padding: 10px;
+}
+
+.container {
+  width: 60vw;
+  height: 30vh;
+  background-color: red;
+  font-size: 11px;
+
+ .element {
+  width: 70%;
+  height: 40px;
+  background-color: rgba(200, 0, 100, 0.5);
+  font-size: 2em;
+ }
+
+ .html-element {
+  width: 70%;
+  height: 40px;
+  background-color: gray;
+  font-size: 2rem;
+  overflow: hidden;
+ }
 }
