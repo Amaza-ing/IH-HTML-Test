@@ -17,14 +17,22 @@ body {
   background-repeat: no-repeat;
   background-position-y: 100px;
   /* background-attachment: fixed; */
-  background: rgb(2,0,36);
-  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(138,142,0,0.8155637254901961) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(138, 142, 0, 0.8155637254901961) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 h1 {
+  margin: 0;
   color: yellow;
   background-color: black;
   letter-spacing: 5px;
+  /* position: fixed; */
+  top: 0;
 }
 
 p {
@@ -101,40 +109,104 @@ input[type="text"] {
   background-color: lightgray;
 }
 
-.box {
-  width: 150px;
-  height: 150px;
-  background-color: blue;
-  border: 3px solid black;
-  padding: 10px;
-}
+.box-container {
+  border: 2px solid darkblue;
+  position: relative;
 
-.box2 {
-  width: 130px;
-  height: 130px;
-  background-color: blue;
-  border: 3px solid black;
-  padding: 10px;
+  .box {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border: 3px solid black;
+    padding: 10px;
+    position: relative;
+    top: 100px;
+    left: 300px;
+  }
+
+  .box2 {
+    width: 130px;
+    height: 130px;
+    background-color: orange;
+    border: 3px solid black;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+  }
 }
 
 .container {
   width: 60vw;
-  height: 30vh;
+  height: 60vh;
   background-color: red;
   font-size: 11px;
 
- .element {
-  width: 70%;
-  height: 40px;
-  background-color: rgba(200, 0, 100, 0.5);
-  font-size: 2em;
- }
+  .sticky {
+    position: sticky;
+    top: 50px;
+  }
 
- .html-element {
-  width: 70%;
-  height: 40px;
-  background-color: gray;
-  font-size: 2rem;
-  overflow: hidden;
- }
+  .element {
+    width: 70%;
+    height: 40px;
+    background-color: rgba(200, 0, 100, 0.5);
+    font-size: 2em;
+  }
+
+  .html-element {
+    width: 70%;
+    height: 40px;
+    background-color: gray;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+}
+
+.button {
+  margin: 30px;
+  width: 100px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: red;
+  transform: scale(1.5);
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  animation: mover 2s infinite alternate;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid lightgray;
+  border-top: 5px solid blue;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
 }
